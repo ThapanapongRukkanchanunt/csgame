@@ -1,0 +1,28 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+    <h1>Welcome to {{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+
+    <h2>Recent Posts</h2>
+    <ul class="post-list">
+        {% for post in site.posts limit:5 %}
+        <li class="post-list-item">
+            <h3>
+                <a class="post-list-link" href="{{ post.url | relative_url }}">
+                    {{ post.title }}
+                </a>
+            </h3>
+            <p class="post-list-meta">
+                {{ post.date | date: "%B %d, %Y" }}
+            </p>
+            {% if post.excerpt %}
+            <p class="post-list-excerpt">{{ post.excerpt }}</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
