@@ -3,9 +3,9 @@
         <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
         
         <nav class="site-nav">
-            <a href="{{ '/' | relative_url }}">Home</a>
-            <a href="{{ '/blog/' | relative_url }}">Blog</a>
-            <a href="{{ '/about/' | relative_url }}">About</a>
+            {% for item in site.data.navigation %}
+            <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
+            {% endfor %}
         </nav>
     </div>
 </header>
