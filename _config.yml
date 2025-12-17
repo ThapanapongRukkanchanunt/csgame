@@ -1,0 +1,44 @@
+title: "SIG: Game Intelligence"
+description: "A Special Interest Group for AI in Games, Game AI research, and practical game intelligence."
+url: "" # optional for local dev; GitHub Pages fills this in
+baseurl: "" # if hosted at /repo-name, set baseurl: "/sig-game-intelligence"
+
+theme: null
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+author:
+  name: "SIG: Game Intelligence"
+  email: "sig-game-intel@example.com"
+
+# Navigation
+nav:
+  - title: "About"
+    url: /about/
+  - title: "Activities"
+    url: /activities/
+  - title: "Resources"
+    url: /resources/
+  - title: "News"
+    url: /news/
+  - title: "Join"
+    url: /join/
+  - title: "Events"
+    url: /events/
+
+# Collections (optional, but useful later for events)
+collections:
+  events:
+    output: true
+    permalink: /events/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
