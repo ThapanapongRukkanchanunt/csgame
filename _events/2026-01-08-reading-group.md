@@ -1,7 +1,7 @@
 ---
 title: "Reading Group #1: RL for Games"
-start: 2026-01-05 12:00
-end: 2026-01-05 13:00
+start: 2026-01-08 12:00
+end: 2026-01-08 13:00
 timezone: "Asia/Bangkok"
 location: "CS Building, Room 204"
 mode: "Onsite"
