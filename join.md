@@ -1,6 +1,7 @@
 ---
 title: "Join"
-subtitle: "How to participate and how to contact the organizers."
+layout: single
+permalink: /join/
 ---
 
 ## Join

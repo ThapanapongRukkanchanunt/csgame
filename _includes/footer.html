@@ -1,4 +1,13 @@
-<p class="fineprint">
-    Department of Computer Science, Faculty of Science, Chiang Mai University ·
-    <a href="{{ '/join/' | relative_url }}">Contact</a>
-</p>
+<footer class="page__footer">
+    <div class="page__footer-follow">
+        <ul class="social-icons">
+            <!-- Optional: add footer links here -->
+            <li><a href="{{ '/join/' | relative_url }}">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="page__footer-copyright">
+        © {{ "now" | date: "%Y" }} {{ site.title }}<br>
+        Department of Computer Science, Faculty of Science, Chiang Mai University
+    </div>
+</footer>

@@ -1,7 +1,7 @@
 ---
 title: "Events"
-subtitle: "Upcoming and past SIG sessions."
-layout: page
+layout: single
+permalink: /events/
 ---
 
 {% assign now = "now" | date: "%s" %}

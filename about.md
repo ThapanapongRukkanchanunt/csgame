@@ -1,6 +1,7 @@
 ---
 title: "About"
-subtitle: "What the SIG is, and what it is not."
+layout: single
+permalink: /about/
 ---
 
 ## Purpose

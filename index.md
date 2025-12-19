@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: single
 title: "Home"
+permalink: /
 ---
 
 <section class="hero">
