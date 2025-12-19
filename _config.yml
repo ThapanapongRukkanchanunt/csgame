@@ -1,24 +1,37 @@
-title: "SIG: Game intelligence"
+title: "SIG: Game Intelligence"
 description: "A Special Interest Group for AI in Games, Game AI research, and practical game intelligence."
-
 url: "https://thapanapongrukkanunt.github.io"
 baseurl: "/csgame"
 
-#url: ""
-#baseurl: ""
-
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: dark
-logo: "/assets/img/logo.svg"
+theme: null
 
 markdown: kramdown
 permalink: pretty
 
 plugins:
-  - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-sitemap
 
+author:
+  name: "SIG: Game Intelligence"
+  email: "sig-game-intel@example.com"
+
+# Navigation
+nav:
+  - title: "About"
+    url: /about/
+  - title: "Activities"
+    url: /activities/
+  - title: "Resources"
+    url: /resources/
+  - title: "News"
+    url: /news/
+  - title: "Join"
+    url: /join/
+  - title: "Events"
+    url: /events/
+
+# Collections (optional, but useful later for events)
 collections:
   events:
     output: true
@@ -27,18 +40,5 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: posts
     values:
-      layout: single
-
-  - scope:
-      path: ""
-      type: events
-    values:
-      layout: single
-
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
+      layout: page

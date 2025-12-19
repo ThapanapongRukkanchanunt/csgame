@@ -1,7 +1,6 @@
 ---
 title: "Resources"
-layout: single
-permalink: /resources/
+subtitle: "Starting points for members and newcomers."
 ---
 
 ## Core topics

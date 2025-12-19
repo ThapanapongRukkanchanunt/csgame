@@ -1,7 +1,6 @@
 ---
 title: "Activities"
-layout: single
-permalink: /activities/
+subtitle: "Meetups, reading groups, demos, and hands-on sessions."
 ---
 
 ## Weekly sessions

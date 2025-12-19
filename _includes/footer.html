@@ -1,13 +1,11 @@
-<footer class="page__footer">
-    <div class="page__footer-follow">
-        <ul class="social-icons">
-            <!-- Optional: add footer links here -->
-            <li><a href="{{ '/join/' | relative_url }}">Contact</a></li>
-        </ul>
-    </div>
-
-    <div class="page__footer-copyright">
-        © {{ "now" | date: "%Y" }} {{ site.title }}<br>
-        Department of Computer Science, Faculty of Science, Chiang Mai University
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>
+            © {{ "now" | date: "%Y" }} {{ site.title }} ·
+            <a href="{{ '/join/' | relative_url }}">Contact</a>
+        </p>
+        <p class="fineprint">
+            Built with Jekyll · Maintainership and content policy available on request.
+        </p>
     </div>
 </footer>

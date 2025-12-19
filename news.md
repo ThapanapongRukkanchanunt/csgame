@@ -1,7 +1,6 @@
 ---
 title: "News"
-layout: single
-permalink: /news/
+subtitle: "Announcements and updates."
 ---
 
 {% if site.posts.size == 0 %}
