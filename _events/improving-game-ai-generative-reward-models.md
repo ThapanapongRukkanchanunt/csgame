@@ -22,13 +22,14 @@ tags:
 ---
 
 ## Event Overview
-This talk introduces **research opportunities and graduate programs** at the Russ College of Engineering and Technology, **:contentReference[oaicite:0]{index=0}**, with concrete examples from faculty-led research in Computer Science.
+This talk introduces **research opportunities and graduate programs** at the Russ College of Engineering and Technology, **Ohio University**, with concrete examples from faculty-led research in Computer Science.
 
 The session highlights ongoing projects at the intersection of **Game AI, Reinforcement Learning, and Generative Models**, as well as applied **Augmented Reality (AR)** research in healthcare.
 
 ---
 
 ## Topics & Research Directions
+
 ### 🎮 Game AI Competition Research
 - Reinforcement Learning (RL)
 - Large Language Models (LLMs)
@@ -48,7 +49,7 @@ The session highlights ongoing projects at the intersection of **Game AI, Reinfo
 
 ## Speaker
 **Dr. Chang Liu**  
-Professor of Computer Science, **:contentReference[oaicite:1]{index=1}**
+Professor of Computer Science, **Ohio University**
 
 ### Speaker Bio
 Dr. Chang Liu received his Ph.D. in Information & Computer Science from the University of California, Irvine, in 2002. He is currently a full professor in Computer Science at Ohio University. His research spans **software engineering, artificial intelligence, and mobile/virtual applications**.
@@ -56,9 +57,7 @@ Dr. Chang Liu received his Ph.D. in Information & Computer Science from the Univ
 He has published in leading venues such as *IEEE Transactions on Software Engineering* and *ICSE*, and has received **over USD 5 million** in research funding from the U.S. National Science Foundation and other federal agencies. He serves on the editorial board of *Scientific Reports* (Nature).
 
 Dr. Liu is also an active contributor to the **Game AI community**, having served as:
-- Competition Chair of the **:contentReference[oaicite:2]{index=2} (CoG) 2024**
+- Competition Chair of the **IEEE Conference on Games (CoG) 2024**
 - Host of the **IEEE CoG MicroRTS Game AI Competition 2025**
 
 In addition, he has volunteered with IEEE for over a decade and currently serves as the **IEEE Region 2 Humanitarian Activities Coordinator**.
-
----
