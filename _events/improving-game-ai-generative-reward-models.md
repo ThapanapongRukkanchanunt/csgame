@@ -1,7 +1,6 @@
 ---
 title: "Improving Game AI with Generative Reward Models"
 subtitle: "Research Opportunities at Ohio University"
-layout: single
 
 start: 2026-01-09 17:00
 end: 2026-01-09 18:00
