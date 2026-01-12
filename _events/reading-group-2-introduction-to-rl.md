@@ -1,7 +1,7 @@
 ---
 title: "Reading Group #2: Introduction to Reinforcement Learning"
-start: 2025-01-15 13:00
-end: 2025-01-15 14:00
+start: 2026-01-15 13:00
+end: 2026-01-15 14:00
 timezone: Asia/Bangkok
 
 location: "CSB204"

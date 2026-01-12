@@ -1,8 +1,8 @@
 ---
 title: "Reading Group #3: Value-based Reinforcement Learning"
 
-start: 2025-02-04 15:00
-end: 2025-02-04 16:00
+start: 2026-02-04 15:00
+end: 2026-02-04 16:00
 timezone: Asia/Bangkok
 
 location: "CSB204"
