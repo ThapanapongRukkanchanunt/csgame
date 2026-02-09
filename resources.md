@@ -18,3 +18,5 @@ subtitle: "Starting points for members and newcomers."
 ## Community links
 - Pokemon Showdown ([Github](https://github.com/smogon/pokemon-showdown))
 - SC2API ([Document](https://blizzard.github.io/s2client-api/))
+- RL Recording ([YouTube](https://www.youtube.com/watch?v=e5Om8XoBWTI))
+- XO Game Engine ([Colab](https://colab.research.google.com/drive/1cJXOsA2-81Ah5seUfJZyKPsKr6xay6IZ?usp=sharing))

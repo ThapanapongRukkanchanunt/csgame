@@ -20,14 +20,10 @@ author:
 nav:
   - title: "About"
     url: /about/
-  - title: "Activities"
-    url: /activities/
   - title: "Resources"
     url: /resources/
-  - title: "News"
-    url: /news/
-  - title: "Join"
-    url: /join/
+  - title: "Members"
+    url: /members/
   - title: "Events"
     url: /events/
 

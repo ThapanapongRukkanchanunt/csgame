@@ -5,7 +5,7 @@ start: 2026-02-11 15:00
 end: 2026-02-11 16:00
 timezone: Asia/Bangkok
 
-location: "CSB204"
+location: "CSB203"
 mode: "Onsite"
 
 tags:
