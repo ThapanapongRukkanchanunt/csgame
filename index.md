@@ -10,8 +10,8 @@ title: "Home"
     reinforcement learning for games, and practical engineering for intelligent game systems.
   </p>
   <div class="cta">
-    <a class="button primary" href="{{ '/join/' | relative_url }}">Join the SIG</a>
-    <a class="button" href="{{ '/activities/' | relative_url }}">See Activities</a>
+    <a class="button primary" href="{{ '/members/' | relative_url }}">Join the SIG</a>
+    <a class="button" href="{{ '/events/' | relative_url }}">See Activities</a>
     <a class="button" href="{{ '/resources/' | relative_url }}">Browse Resources</a>
   </div>
 </section>
@@ -36,17 +36,36 @@ title: "Home"
 </section>
 
 <section style="margin-top:16px">
-  <h2 style="margin:0 0 10px">Latest updates</h2>
+  <h2 style="margin:0 0 10px">Upcoming events</h2>
+
   <div class="content">
-    {% assign posts = site.posts | slice: 0, 3 %}
-    {% if posts.size == 0 %}
-      <p>No posts yet. Add your first update in <code>_posts/</code>.</p>
+    {% assign events = site.events | sort: "start" %}
+
+    {% comment %}
+      Filter only future events
+    {% endcomment %}
+    {% assign now = site.time | date: "%s" %}
+
+    {% assign upcoming = "" | split: "" %}
+    {% for e in events %}
+      {% assign start_ts = e.start | date: "%s" %}
+      {% if start_ts >= now %}
+        {% assign upcoming = upcoming | push: e %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign upcoming = upcoming | slice: 0, 3 %}
+
+    {% if upcoming.size == 0 %}
+      <p>No upcoming events yet.</p>
     {% else %}
       <ul>
-        {% for post in posts %}
+        {% for event in upcoming %}
           <li>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            <span style="color:var(--muted)"> — {{ post.date | date: "%b %d, %Y" }}</span>
+            <a href="{{ event.url | relative_url }}">{{ event.title }}</a>
+            <span style="color:var(--muted)">
+              — {{ event.start | date: "%b %d, %Y %H:%M" }}
+            </span>
           </li>
         {% endfor %}
       </ul>
