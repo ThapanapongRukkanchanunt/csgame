@@ -12,21 +12,19 @@ tags:
   - reading-group
   - workshop
   - reinforcement-learning
-  - value-based-rl
+  - policy-based-rl
   - game-ai
 ---
 
 ## Topic
 **Policy-based Reinforcement Learning**
 
-This session introduces **policy-based reinforcement learning**, a family of methods that learn a policy directly rather than estimating value functions.
-
-Building on our previous sessions on value-based RL, we will explore when and why policy-based approaches (e.g., policy gradients) are preferred — especially in problems with large or continuous action spaces and more complex behaviors often seen in games.
+This session continues **policy-based reinforcement learning**, on a Tic-Tac-Toe game. We also compare results with value-based reinforcement learning.
 
 ---
 
 ## Agenda
-- **30 minutes:** Conceptual introduction  
+- **30 minutes:** Review
   - Policy-based reinforcement learning-related algorithm
 
 - **30 minutes:** Hands-on workshop  
