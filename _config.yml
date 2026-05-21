@@ -20,6 +20,8 @@ author:
 nav:
   - title: "About"
     url: /about/
+  - title: "Projects"
+    url: /projects/
   - title: "Resources"
     url: /resources/
   - title: "Members"
@@ -32,9 +34,22 @@ collections:
   events:
     output: true
     permalink: /events/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
 
 defaults:
   - scope:
       path: ""
     values:
       layout: page
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: event
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project

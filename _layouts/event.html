@@ -1,0 +1,104 @@
+---
+layout: default
+---
+<article class="page event-detail">
+    {% include breadcrumbs.html %}
+    
+    <header class="page-header event-header">
+        <div class="event-meta-top">
+            <span class="event-tag-badge">{{ page.mode | default: "Event" }}</span>
+            {% if page.start %}
+            <span class="event-date-top">{{ page.start | date: "%B %d, %Y" }}</span>
+            {% endif %}
+        </div>
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <p class="subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+    </header>
+
+    <div class="event-grid">
+        <div class="event-main content">
+            {{ content }}
+        </div>
+
+        <aside class="event-sidebar">
+            <div class="sidebar-card">
+                <h3>Event Details</h3>
+                <ul class="event-info-list">
+                    {% if page.start %}
+                    <li>
+                        <span class="info-label">Date & Time</span>
+                        <span class="info-val">
+                            {{ page.start | date: "%a, %b %d, %Y" }}<br>
+                            {{ page.start | date: "%H:%M" }} {% if page.end %}– {{ page.end | date: "%H:%M" }}{% endif %}
+                            {% if page.timezone %}<small style="color:var(--muted)">({{ page.timezone }})</small>{% endif %}
+                        </span>
+                    </li>
+                    {% endif %}
+                    
+                    {% if page.location %}
+                    <li>
+                        <span class="info-label">Location</span>
+                        <span class="info-val">
+                            {{ page.location }}
+                            {% if page.mode %}· <span class="mode-badge">{{ page.mode }}</span>{% endif %}
+                        </span>
+                    </li>
+                    {% endif %}
+
+                    {% if page.speakers %}
+                    <li>
+                        <span class="info-label">Speakers</span>
+                        <span class="info-val">
+                            {% for speaker in page.speakers %}
+                                <div class="speaker-name">{{ speaker }}</div>
+                            {% endfor %}
+                        </span>
+                    </li>
+                    {% endif %}
+                </ul>
+
+                {% if page.tags %}
+                <div class="event-tags-section">
+                    <h4>Topics</h4>
+                    <div class="tags-container">
+                        {% for tag in page.tags %}
+                        <span class="tag-chip">#{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if page.registration_url %}
+                <div class="sidebar-cta">
+                    <a href="{{ page.registration_url }}" class="button primary" target="_blank" rel="noopener noreferrer" style="width:100%; text-align:center; display:block;">Register Now</a>
+                </div>
+                {% endif %}
+            </div>
+        </aside>
+    </div>
+
+    <!-- Chronological Navigation -->
+    <nav class="event-pagination" aria-label="Event Traversal">
+        <div class="pagination-inner">
+            {% if page.previous %}
+            <a class="pag-link prev" href="{{ page.previous.url | relative_url }}">
+                <span class="pag-dir">← Previous Event</span>
+                <span class="pag-title">{{ page.previous.title }}</span>
+            </a>
+            {% else %}
+            <div class="pag-link empty"></div>
+            {% endif %}
+
+            {% if page.next %}
+            <a class="pag-link next" href="{{ page.next.url | relative_url }}">
+                <span class="pag-dir">Next Event →</span>
+                <span class="pag-title">{{ page.next.title }}</span>
+            </a>
+            {% else %}
+            <div class="pag-link empty"></div>
+            {% endif %}
+        </div>
+    </nav>
+</article>

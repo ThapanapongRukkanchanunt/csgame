@@ -1,0 +1,17 @@
+{% if page.url != "/" and page.url != "/index.html" %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <span class="sep">/</span>
+    {% if page.collection %}
+        {% assign col_title = page.collection | capitalize %}
+        {% if page.collection == 'events' %}
+            {% assign col_url = '/events/' %}
+        {% else %}
+            {% assign col_url = '/' | append: page.collection | append: '/' %}
+        {% endif %}
+        <a href="{{ col_url | relative_url }}">{{ col_title }}</a>
+        <span class="sep">/</span>
+    {% endif %}
+    <span class="current">{{ page.title }}</span>
+</nav>
+{% endif %}

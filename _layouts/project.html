@@ -1,0 +1,81 @@
+---
+layout: default
+---
+<article class="page project-detail">
+    {% include breadcrumbs.html %}
+    
+    <header class="page-header project-header">
+        <div class="project-meta-top">
+            <span class="status-badge {{ page.status | downcase | replace: ' ', '-' }}">{{ page.status | capitalize }}</span>
+        </div>
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <p class="subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+    </header>
+
+    <div class="project-grid-detail">
+        <div class="project-main content">
+            {{ content }}
+            
+            {% if page.publications %}
+            <div class="project-publications-section" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--line);">
+                <h2 style="margin-top:0;">Publications</h2>
+                <ul class="publications-list" style="padding-left: 20px; color: var(--muted);">
+                    {% for pub in page.publications %}
+                    <li style="margin-bottom: 12px;">
+                        <strong style="color: var(--text);">"{{ pub.title }}"</strong><br>
+                        <span style="font-size: 0.9rem;">
+                            {% if pub.authors %}{{ pub.authors | join: ", " }}{% endif %}
+                            {% if pub.venue %} — <em>{{ pub.venue }}</em>{% endif %}
+                            {% if pub.year %}, {{ pub.year }}{% endif %}
+                        </span>
+                        {% if pub.url %}
+                        <br><a class="pub-link" href="{{ pub.url }}" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; color: var(--accent);">[Paper Link]</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+
+        <aside class="project-sidebar">
+            <div class="sidebar-card">
+                <h3>Project Info</h3>
+                <ul class="project-info-list">
+                    {% if page.status %}
+                    <li>
+                        <span class="info-label">Status</span>
+                        <span class="info-val">
+                            <span class="status-badge {{ page.status | downcase | replace: ' ', '-' }}" style="display: inline-block;">{{ page.status | capitalize }}</span>
+                        </span>
+                    </li>
+                    {% endif %}
+                    
+                    {% if page.members %}
+                    <li>
+                        <span class="info-label">Team</span>
+                        <span class="info-val">
+                            {% for member in page.members %}
+                                <div class="member-name" style="font-weight:500; margin-bottom: 2px;">{{ member }}</div>
+                            {% endfor %}
+                        </span>
+                    </li>
+                    {% endif %}
+
+                    {% if page.repo %}
+                    <li>
+                        <span class="info-label">Repository</span>
+                        <span class="info-val">
+                            <a href="{{ page.repo }}" target="_blank" rel="noopener noreferrer" class="repo-link" style="color: var(--accent); font-weight: 500;">
+                                GitHub Repository
+                            </a>
+                        </span>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </aside>
+    </div>
+</article>

@@ -5,9 +5,19 @@
                 class="brand-logo" />
         </a>
 
-        <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <nav class="nav" id="navMenu">
             {% for item in site.nav %}
-            <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            {% assign is_active = false %}
+            {% if page.url == item.url or (item.url != '/' and page.url contains item.url) %}
+                {% assign is_active = true %}
+            {% endif %}
+            <a class="nav-link{% if is_active %} active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
             {% endfor %}
         </nav>
     </div>
